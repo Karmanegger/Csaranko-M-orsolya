@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Csarankó M. Orsolya Természetgyógyász</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Alapértelmezett stílusok */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-size: cover;
+            background-attachment: fixed;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: rgba(0, 128, 128, 0.7);
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .navbar {
+            background-color: rgba(0, 128, 128, 0.7);
+            overflow: hidden;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: rgba(0, 128, 128, 0.5);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        section {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(0, 128, 128, 0.7);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Csarankó M. Orsolya Természetgyógyász</h1>
+    </header>
+
+    <div class="navbar">
+        <a href="#" onclick="showTab('about')">Rólam</a>
+        <a href="#" onclick="showTab('contact')">Elérhetőség</a>
+        <a href="#" onclick="showTab('services')">Szolgáltatások</a>
+        <a href="#" onclick="showTab('blog')">Blog</a>
+    </div>
+
+    <div id="main-content">
+        <div id="about" class="tab-content active">
+            <section>
+                <h2>Rólam</h2>
+                <p>
+                    Üdvözlöm, Csarankó M. Orsolya vagyok, természetgyógyász. Hiszek abban, hogy a test és a lélek harmóniája elengedhetetlen a teljes egészséghez. Szolgáltatásaim célja, hogy segítsek megtalálni és megőrizni ezt az egyensúlyt, természetes módszerekkel és holisztikus szemlélettel. Legyen szó fájdalomcsillapításról, stresszoldásról vagy általános közérzetjavításról, egyéni igényekhez igazított kezeléseimmel támogatom Önt az egészséges életmód felé vezető úton.
+                </p>
+            </section>
+        </div>
+
+        <div id="contact" class="tab-content">
+            <section>
+                <h2>Elérhetőség</h2>
+                <p>Telefon: <a href="tel:+36706227803">+36 70 622 7803</a></p>
+                <p>Facebook: <a href="https://www.facebook.com/profile.php?id=100090876056062" target="_blank">Facebook profil</a></p>
+            </section>
+        </div>
+
+        <div id="services" class="tab-content">
+            <section>
+                <h2>Szolgáltatások</h2>
+                <ul>
+                    <li>Baba masszázs</li>
+                    <li>Kinezio tape</li>
+                    <li>Köpölyözés</li>
+                    <li>Lávakő kezelès</li>
+                    <li>TENS kezelés</li>
+                    <li>Szervzonás kézmasszázs</li>
+                    <li>Ultrahang kezelés</li>
+                    <li>Fülbevaló belövés</li>
+                    <li>Fülakupunktúrás kezelés</li>
+                    <li>Gyógymasszázs</li>
+                </ul>
+            </section>
+        </div>
+
+        <div id="blog" class="tab-content">
+            <section>
+                <h2>Blog</h2>
+                <article>
+                    <h3>Első bejegyzés címe</h3>
+                    <p>Ez az első blogbejegyzés bevezető szövege. Itt oszthatod meg a legfrissebb híreket, tippeket és tanácsokat az egészséges életmódhoz.</p>
+                </article>
+                <!-- További blogbejegyzések -->
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Csarankó M. Orsolya Természetgyógyász. Minden jog fenntartva.</p>
+    </footer>
+
+    <script>
+        function showTab(tabId) {
+            // Elrejtjük az összes tabot
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Megjelenítjük a kiválasztott tabot
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
